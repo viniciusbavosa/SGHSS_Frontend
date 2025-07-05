@@ -48,7 +48,7 @@
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  color: #9ca3af;
+  color: hsl(218, 11%, 5%);
   font-size: 16px;
 }
 
@@ -170,7 +170,7 @@
 .detail-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 .detail-icon {
@@ -228,7 +228,6 @@
   color: white;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .consultas-page {
     padding: 16px;

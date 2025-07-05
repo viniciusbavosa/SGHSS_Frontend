@@ -5,6 +5,8 @@ import { BookingModal } from "../../components/modal/booking-modal";
 import LogoIcon from "../../components/logo-icon/logo";
 import { Button } from "../../components/button/button";
 import { useModalContext } from "../../hooks/useModalContext/useModalContext";
+import { Calendar } from "../../components/icons/calendar/calendar";
+import { Search } from "../../components/icons/search/search";
 
 const consultas = [
   {
@@ -67,7 +69,9 @@ function RouteComponent() {
 
         <div className="consultas-controls">
           <div className="search-container">
-            <div className="search-icon">🔍</div>
+            <div className="search-icon">
+              <Search />
+            </div>
             <input
               type="text"
               placeholder="Buscar consultas..."
@@ -98,7 +102,9 @@ function RouteComponent() {
                   <p className="doctor-specialty">{consulta.specialty}</p>
                   <div className="consulta-details">
                     <div className="detail-item">
-                      <span className="detail-icon">📅</span>
+                      <span className="detail-icon">
+                        <Calendar />
+                      </span>
                       <span className="detail-text">
                         {consulta.date} • {consulta.time}
                       </span>
