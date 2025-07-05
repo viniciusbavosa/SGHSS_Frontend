@@ -3,10 +3,7 @@ interface StepIndicatorProps {
   totalSteps: number;
 }
 
-export const StepIndicator = ({
-  currentStep,
-  totalSteps,
-}: StepIndicatorProps) => {
+export const StepIndicator = ({ currentStep }: StepIndicatorProps) => {
   const steps = [
     "Especialidade",
     "Médico",
