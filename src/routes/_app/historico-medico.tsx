@@ -6,6 +6,7 @@ import { Doctor } from "../../components/icons/doctor/doctor";
 import { Document } from "../../components/icons/document/document";
 import { Statistic } from "../../components/icons/statistic/statistic";
 import { Search } from "../../components/icons/search/search";
+import { Calendar } from "../../components/icons/calendar/calendar";
 
 export const Route = createFileRoute("/_app/historico-medico")({
   beforeLoad: async () => {
@@ -155,7 +156,9 @@ function Historico() {
                 )}
                 {item.lab && <p className="item-lab">{item.lab}</p>}
                 <div className="item-datetime">
-                  <span className="datetime-icon">📅</span>
+                  <span className="datetime-icon">
+                    <Calendar />
+                  </span>
                   <span>
                     {item.date} • {item.time}
                   </span>
