@@ -1,0 +1,357 @@
+.historico-page {
+  padding: 32px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.historico-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+}
+
+.historico-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: hsl(218, 0%, 10%);
+  font-size: 26px;
+}
+
+.search-input {
+  padding: 12px 16px 12px 48px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: white;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-btn {
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  color: #6b7280;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.filter-btn.active {
+  background-color: var(--primary-cllr);
+  border-color: var(--primary-cllr);
+  color: white;
+  font-weight: 600;
+}
+
+.historico-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.historico-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all 0.2s ease;
+}
+
+.historico-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.historico-card.consulta {
+  border-left: 4px solid var(--primary-cllr);
+}
+
+.historico-card.exame {
+  border-left: 4px solid #3b82f6;
+}
+
+.card-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1;
+}
+
+.item-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 48px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.item-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+}
+
+.item-type-badge {
+  padding: 4px 8px;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.item-specialty,
+.item-lab {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+.item-datetime {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.datetime-icon {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-section {
+  background-color: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-cllr);
+}
+
+.detail-section strong {
+  color: #374151;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.detail-section p {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.detail-section ul {
+  margin: 0;
+  padding-left: 16px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.detail-section li {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.completed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.view-details-btn {
+  background: none;
+  border: 1px solid var(--primary-cllr);
+  color: var(--primary-cllr);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.view-details-btn:hover {
+  background-color: #10b981;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .historico-page {
+    padding: 16px;
+  }
+
+  .historico-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .historico-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .search-container {
+    max-width: none;
+  }
+
+  .filter-buttons {
+    justify-content: center;
+  }
+
+  .historico-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .card-left {
+    gap: 16px;
+  }
+
+  .card-right {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .item-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .historico-page {
+    padding: 12px;
+  }
+
+  .historico-card {
+    padding: 16px;
+  }
+
+  .item-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .card-right {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .status-badge {
+    text-align: center;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+  }
+}

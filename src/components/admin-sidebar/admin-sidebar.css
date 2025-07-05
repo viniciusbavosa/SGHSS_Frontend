@@ -1,0 +1,168 @@
+.sidebar {
+  height: 100vb;
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.breadcrumb {
+  color: #a0aec0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.user-profile {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.avatar {
+  position: relative;
+}
+
+.avatar-icon {
+  font-size: 56px;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  margin: 0 0 4px 0;
+  color: #1a202c;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.config-link {
+  display: flex;
+  background: none;
+  border: none;
+  color: #718096;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  transition: color 0.2s ease;
+}
+
+.config-link:hover {
+  color: #20b2aa;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border: none;
+  background: none;
+  color: #4a5568;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  font-family: inherit;
+  border-radius: 0;
+  position: relative;
+}
+
+#cadastros,
+#internacoes,
+#relatorios {
+  cursor: not-allowed;
+  transition: none;
+}
+
+#cadastros:hover,
+#internacoes:hover,
+#relatorios:hover {
+  scale: 1;
+}
+
+.nav-item.active {
+  background-color: var(--primary-cllr);
+  color: white;
+  font-weight: 600;
+}
+
+.nav-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--primary-cllr);
+}
+
+.nav-icon {
+  font-size: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-footer {
+  padding: 24px;
+  border-top: 1px solid #f1f3f4;
+}
+
+.schedule-btn {
+  min-inline-size: 50%;
+  background-color: var(--primary-cllr);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  box-shadow: 0 2px 4px rgba(32, 178, 170, 0.2);
+}
+
+.schedule-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(32, 178, 170, 0.3);
+}
+
+.schedule-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(32, 178, 170, 0.2);
+}
+
+.pacientes,
+.prontuarios {
+  transition: none;
+  cursor: not-allowed;
+}
+
+.pacientes:hover,
+.prontuarios:hover {
+  scale: 1;
+}
+
+@media (max-width: 768px) {
+}

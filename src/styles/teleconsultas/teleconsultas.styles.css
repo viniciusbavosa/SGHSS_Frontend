@@ -1,0 +1,472 @@
+.teleconsulta-page {
+  padding: 32px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.teleconsulta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+}
+
+.current-date {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.teleconsulta-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 32px;
+  background-color: #f1f5f9;
+  padding: 4px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.tab-btn:hover {
+  color: #334155;
+}
+
+.tab-btn.active {
+  background-color: white;
+  color: var(--primary-cllr);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tab-icon {
+  font-size: 16px;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-header {
+  margin-bottom: 8px;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+}
+
+.section-header p {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+.available-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.slot-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.slot-card.unavailable {
+  opacity: 0.6;
+  background-color: #f9fafb;
+}
+
+.slot-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.doctor-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a7f3d0, var(--primary-cllr));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doctor-initials {
+  color: #065f46;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.doctor-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0 0 4px 0;
+}
+
+.doctor-specialty {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.slot-datetime {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.datetime-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.datetime-icon {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.slot-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.availability-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.availability-badge.available {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.availability-badge.unavailable {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.schedule-slot-btn {
+  background-color: var(--primary-cllr);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.schedule-slot-btn:disabled {
+  background-color: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.scheduled-calls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.call-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+  transition: all 0.2s ease;
+}
+
+.call-info {
+  margin-bottom: 20px;
+}
+
+.call-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.call-status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.call-status-badge.confirmada {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.call-status-badge.pendente {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.call-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-icon {
+  font-size: 24px;
+  color: #6b7280;
+  width: 16px;
+}
+
+.detail-text {
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.call-actions {
+  max-inline-size: 50%;
+  margin: auto;
+}
+
+.join-call-btn {
+  background-color: var(--primary-cllr);
+  color: white;
+  border: none;
+  padding: 12px 0;
+  margin-block-end: 6px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.join-call-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.join-call-btn:disabled {
+  background-color: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.btn-icon {
+  font-size: 16px;
+}
+
+.cancel-call-btn {
+  background: none;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-call-btn:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+.teleconsulta-info {
+  margin-top: 32px;
+}
+
+.info-card {
+  background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  border: 1px solid #e0f2fe;
+}
+
+.info-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.info-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0 0 12px 0;
+}
+
+.info-content ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.info-content li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .teleconsulta-page {
+    padding: 16px;
+  }
+
+  .teleconsulta-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .teleconsulta-tabs {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .slot-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .slot-info {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .slot-actions {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .call-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .call-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .info-card {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .teleconsulta-page {
+    padding: 12px;
+  }
+
+  .teleconsulta-tabs {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    justify-content: center;
+  }
+
+  .slot-card,
+  .call-card {
+    padding: 16px;
+  }
+
+  .doctor-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .doctor-initials {
+    font-size: 14px;
+  }
+
+  .info-card {
+    padding: 20px;
+  }
+}

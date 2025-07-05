@@ -1,0 +1,40 @@
+.sidebar__wrapper,
+.doctor-sidebar__wrapper,
+.admin-sidebar__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar__wrapper > *:nth-child(1) {
+  flex: 1 1 25%;
+  min-inline-size: 15ch;
+}
+
+.sidebar__wrapper > *:nth-child(2) {
+  flex: 1 1 75%;
+  min-inline-size: 25ch;
+}
+
+.doctor-sidebar__wrapper > *:nth-child(1) {
+  flex: 1 1 25%;
+  min-inline-size: 15ch;
+}
+
+.doctor-sidebar__wrapper > *:nth-child(2) {
+  flex: 1 1 75%;
+  min-inline-size: 25ch;
+}
+
+.admin-sidebar__wrapper > *:nth-child(1) {
+  flex: 1 1 25%;
+  min-inline-size: 15ch;
+}
+
+.admin-sidebar__wrapper > *:nth-child(2) {
+  flex: 1 1 75%;
+  min-inline-size: 25ch;
+}
+
+.sidebar {
+  min-block-size: 100vb;
+}

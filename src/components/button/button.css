@@ -1,0 +1,20 @@
+button {
+  --bttn-primary-cllr: var(--primary-cllr);
+
+  background-color: var(--bttn-primary-cllr);
+  min-inline-size: 75%;
+
+  border-radius: 8px;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  transition: scale 150ms ease-in;
+
+  font-size: clamp(16px, 22px, 2vi);
+  color: #f0fdfb;
+  font-weight: 600;
+}
+
+button:hover {
+  scale: 1.05;
+}

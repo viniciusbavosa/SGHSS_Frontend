@@ -1,0 +1,6 @@
+input {
+  min-inline-size: 75%;
+  border-radius: 8px;
+  border: 1px solid #80808050;
+  padding: 8px;
+}

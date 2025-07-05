@@ -1,0 +1,115 @@
+.specialty-step {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.step-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.step-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.specialty-card {
+  padding: 1.5rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.specialty-card:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.specialty-card.selected {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.specialty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.specialty-icon {
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+}
+
+.specialty-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.step-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-primary {
+  min-inline-size: initial;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: auto;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.btn-primary:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .specialties-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .specialty-card {
+    padding: 1rem;
+  }
+
+  .specialty-icon {
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

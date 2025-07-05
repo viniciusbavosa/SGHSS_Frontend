@@ -1,0 +1,307 @@
+.consultas-page {
+  padding: 32px;
+  background-color: #f8fafc;
+}
+
+.consultas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+}
+
+.current-date {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.consultas-controls {
+  display: flex;
+
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 48px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: white;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+.bttn__wrapper {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.agendar-btn,
+.buscar-btn {
+  min-inline-size: initial;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.agendar-btn:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+}
+
+.consultas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.consulta-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.consulta-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.consulta-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.doctor-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a7f3d0, #10b981);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doctor-initials {
+  color: #065f46;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.consulta-info {
+  flex: 1;
+}
+
+.doctor-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0 0 4px 0;
+}
+
+.doctor-specialty {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  font-weight: 500;
+}
+
+.consulta-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-icon {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.detail-text {
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.consulta-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.confirmed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.cancelar-btn {
+  background: none;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.cancelar-btn:hover {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .consultas-page {
+    padding: 16px;
+  }
+
+  .consultas-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .consultas-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .search-container {
+    max-width: none;
+  }
+
+  .consulta-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .consulta-left {
+    gap: 16px;
+  }
+
+  .consulta-right {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .doctor-name {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .consultas-page {
+    padding: 12px;
+  }
+
+  .consulta-card {
+    padding: 16px;
+  }
+
+  .doctor-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .doctor-initials {
+    font-size: 16px;
+  }
+
+  .consulta-right {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .status-badge {
+    text-align: center;
+  }
+}

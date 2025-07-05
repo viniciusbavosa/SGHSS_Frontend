@@ -1,0 +1,75 @@
+.auth__wrapper {
+  min-block-size: 100vb;
+  background-color: var(--bg-primary-cllr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+
+  > * {
+    margin: auto;
+  }
+}
+
+.logo__wrapper {
+  display: flex;
+}
+
+.auth__logo {
+  --logo-cllr: #e24536;
+  color: var(--logo-cllr);
+}
+
+.auth__title {
+  text-align: center;
+  font-weight: 500;
+}
+
+.auth__recovery,
+.auth__signup {
+  transition: color 150ms ease-in;
+}
+
+.auth__recovery:hover,
+.auth__signup:hover {
+  color: var(--primary-cllr);
+}
+
+.helper {
+  background-color: white;
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 2px 4px #00000025;
+}
+
+.helper > ul {
+  text-align: start;
+}
+
+.pacient_credential,
+.doctor_credential,
+.admin_credential {
+  list-style: disc;
+  font-weight: 600;
+}
+
+.credential {
+  font-weight: normal;
+  color: var(--primary-cllr);
+}
+
+@media (max-width: 480px) {
+  .logo__wrapper {
+    display: initial;
+  }
+
+  .auth__title {
+    font-size: 1rem;
+  }
+
+  .email__field,
+  .password__field {
+    max-inline-size: 70%;
+  }
+}
