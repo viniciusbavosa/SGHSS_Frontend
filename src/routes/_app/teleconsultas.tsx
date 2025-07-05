@@ -5,6 +5,7 @@ import { Calendar } from "../../components/icons/calendar/calendar";
 import { Clock } from "../../components/icons/clock/clock";
 import { Video } from "../../components/icons/video/video";
 import { Document } from "../../components/icons/document/document";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 export const Route = createFileRoute("/_app/teleconsultas")({
   component: Teleconsulta,
@@ -222,7 +223,9 @@ function Teleconsulta() {
                     )}
                     {call.meetingLink && (
                       <div className="detail-row">
-                        <span className="detail-icon">🔗</span>
+                        <span className="detail-icon">
+                          <Icon icon={"mdi-light:link"} />
+                        </span>
                         <span className="detail-text">
                           Link da reunião disponível
                         </span>
